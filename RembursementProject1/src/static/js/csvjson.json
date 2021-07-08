@@ -1,0 +1,32 @@
+[
+  {
+    "reimbursement_id": 1,
+    "agent_id": 1,
+    "economy": "$2,800.00",
+    "purpose": "utility",
+    "transaction_time": "2021-06-23 21:04:31.817981",
+    "status": "pending",
+    "manager_id": 3,
+    "approval_reason": "NULL"
+  },
+  {
+    "reimbursement_id": 2,
+    "agent_id": 2,
+    "economy": "$4,700.00",
+    "purpose": "weapons",
+    "transaction_time": "2021-06-23 21:12:22.917522",
+    "status": "pending",
+    "manager_id": 1,
+    "approval_reason": "NULL"
+  },
+  {
+    "reimbursement_id": 3,
+    "agent_id": 3,
+    "economy": "$300.00",
+    "purpose": "smokes",
+    "transaction_time": "2021-06-23 21:12:54.534737",
+    "status": "pending",
+    "manager_id": 2,
+    "approval_reason": "NULL"
+  }
+]

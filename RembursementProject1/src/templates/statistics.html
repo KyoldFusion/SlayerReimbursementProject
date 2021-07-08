@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Slayer Statistics</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="../static/img/Layer 14 copy (3).png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="../static/css/mdb.min.css" />
+  </head>
+  <body>
+    <!-- Start your project here-->
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0 me-auto justify-content-evenly" href="#">
+        <img
+          style="padding-left: 25px;"
+          src="../static/img/Layer 14 copy (3).png"
+          height="25"
+          alt=""
+          loading="lazy"
+        />
+      </a>
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-end">
+        <li class="nav-item">
+          <a class="nav-link" href="/index">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/submit_request">Submit Request</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/statistics">Statistics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/pending">Requests</a>
+        </li>
+      </ul>
+      <!-- Left links -->
+    </div>
+    <!-- Collapsible wrapper -->
+
+      <!-- Notifications -->
+      <a
+        class="text-reset me-3 dropdown-toggle hidden-arrow"
+        href="#"
+        id="navbarDropdownMenuLink"
+        role="button"
+        data-mdb-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <i class="fas fa-bell"></i>
+        <span class="badge rounded-pill badge-notification bg-danger">1</span>
+      </a>
+      <ul
+        class="dropdown-menu dropdown-menu-end"
+        aria-labelledby="navbarDropdownMenuLink"
+      >
+      <li>
+        <a class="dropdown-item" href="#">Awaiting Approvals</a>
+      </li>
+        <li id="logout">
+          <a class="dropdown-item" href="http://127.0.0.1:5000/logout">Log out</a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Right elements -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<div class="row">
+  <div class="col-2 text-center">
+    <h1> Valorant Employee Statistics <br> </h1>
+    <p style="text-align: center;"> <i> Results are based solely off of submitted reimbursement requests</i></p>
+  </div>
+</div>
+<br> 
+  <div class="row" id="row">
+  <div class="col-2 text-center">
+    <h1> Most Money Spent <br> </h1>
+    <table id="economyTable" class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th>agent</th>
+        <th>last_name</th>
+        <th>economy</th>
+      </tr>
+    </table>
+  </div>
+  <div class="col-2">
+    <div>
+    <canvas id="myChart"></canvas>
+  </div>
+  </div>
+</div>
+
+
+  <br>
+  <div class="row" id="row">
+  <div class="col-2 text-center">
+    <h1> Most Reimbursements submitted <br> </h1>
+    <table id="requestTable" class="table table-bordered table-hover">
+      <tr class="table-dark">
+        <th>agent</th>
+        <th>last_name</th>
+        <th>Request Count</th>
+      </tr>
+    </table>
+  </div>
+  <div class="col-2">
+    <canvas id="myChart1"></canvas>
+  </div>
+  </div>
+  <br>
+
+
+
+  <div class="row" id="row">
+    <div class="col-2 text-center">
+      <h1> Most Reimbursements Denied <br> </h1>
+      <table id="deniedTable" class="table table-bordered table-hover">
+        <tr class="table-dark">
+          <th>agent</th>
+          <th>last_name</th>
+          <th>Denied Request Count</th>
+        </tr>
+      </table>
+      </div>
+      <div class="col-2 pl-lg-4">
+        <div class="col-5 col-p">
+        <canvas id="myChart2"></canvas>
+      </div>
+    </div>
+<!-- Navbar -->
+<!-- Footer -->
+
+<hr>
+<div class="footer mt-3">
+  <div class="container">
+    <div class="row">
+
+      <div class="footer-col-2">
+        <img src="../static/img/Layer 14 copy (3).png">
+        <hr style="color: black;">
+        <h3> Download our app on ios or Android!</h3>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- End your project here-->
+
+    <!-- MDB -->
+        <!-- MDB icon -->
+        <link rel="icon" href="../static/img/mdb-favicon.ico" type="image/x-icon" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+        <!-- Google Fonts Roboto -->
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+        />
+        <!-- MDB -->
+        <link rel="stylesheet" href="../static/css/mdb.min.css" />
+    <script type="text/javascript" src="../static/js/mdb.min.js"></script>
+    <script type="text/javascript" src="../static/js/statistics.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="../static/css/statistics.css">
+  </body>
+</html>
