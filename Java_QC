@@ -1,0 +1,305 @@
+What is Java?
+    
+    Java is a high level OOP compiling programming langauge.
+
+What does it mean to be a “pass-by-value” language? How is this different from passing by reference?
+   
+    In java, pass-by-value means that a copy of the values from an object will be passed via methods.
+
+            public static void main(String[] args) {
+            Dog aDog = new Dog("Max");
+            Dog oldDog = aDog;
+
+            // we pass the object to foo
+            foo(aDog);
+            // aDog variable is still pointing to the "Max" dog when foo(...) returns
+            aDog.getName().equals("Max"); // true
+            aDog.getName().equals("Fifi"); // false
+            aDog == oldDog; // true
+        }
+
+    Pass-by-reference means to pass the refence fo an argument in the calling function to the
+    corresponding parameter of the function - Not available in Java
+
+What is the difference between the JRE, JDK, and JVM?
+
+    
+    JRE - Java Runtime Environment, JRE is necessary to run Java code which contains the 
+        Runtime environments and libraries that your code calls and is using
+        JVM is stored inside JRE
+
+    JDK - Java Development Kit, Provides the developer the tools like a compiler, debugger, documentation (javadocs)
+        And CLI utilities. JDK has a JRE inside of it.
+
+    JVM - Java Virtual Machine, Java code is compiled to bytecode and runs on JVM 
+        JVM is specific to the operating system by reading the byte code and translating to machine code
+
+What happens during the compilation process?
+
+    During the compilation process the Java code is compiled to bytecode and runs on the JVM
+    and is translatted to machine language specific to the OS
+
+What are the benefits of using Java?
+
+      The benefits of java are that it is platform independent inspired by C and provides
+    automatic memory management and a large library support by Oracle
+
+What is a constructor?
+
+    A constructor is a block of code similar to a method that is called when an
+    instance of an object is created.
+
+    The name of the constructor must be the same as the name of the class and
+    are not considered members of a class.
+
+What is the first line of a constructor?
+    
+A super() or this() must be the first line of any constructor
+
+What are the primitive data types?
+    Byte
+    Boolean
+    Char
+    Short
+    Int
+    Float
+    Double
+
+What is a no args constructor?
+
+    A no args constructor is a constructor that has no parameters(args)
+
+    Animal(){
+        // Body 
+    }
+
+
+
+What is the default constructor?
+
+    If we do not create a constructor, the Java compiler automatically creates
+    a no-arg constructor which is known as the default constructor
+
+    public class MySimpleClass {
+    MySimpleClass someVariable = new MySimpleClass();
+    }
+
+Under what circumstances does a class have a default constructor?
+    
+    If a constructor is not explicitly made in a class there is a default constructor
+
+What are the scopes of a variable in Java?
+
+    Member Variables (Class Level Scope) - can be accessed anywhere in the class
+
+    Local Variables (Method Level Scope) - can only be accessed within the method
+
+    Loop Variables ( Block Level Scope) - only has scope within the brackets
+
+
+What are the different access modifiers? What does each one do?
+
+    Public - available anywhere
+    Protected - Within the same package, and this class' sub-classes
+    Default - Within the same package
+    private - Only within the same class - Associate with getters/setters and encapsulation
+
+What are the different control statements, and how are they different?
+
+    If/Else If/Else - Conditional block that runs if conditions are met
+    For - Used to iterate over data structures
+
+    While - Tests a condition and iterates until condition is met
+
+    Do-While - This guaranteeds that a block will always run once
+
+    Switch - An attempt to match a variable with a contained value 
+
+How do you create an Array in Java?
+
+    An array is a contiguous block of memory storing a group of elements of the same type.
+
+    To create an array in Java
+
+    int[] myInts = new int[]{1,2,3,4};
+    String languages[] = {"Java", "SQL", "Python"};
+
+What is varargs?
+
+    varargs is variable arguments, which allows us to set an argument to a method
+    whose size is undetermined at runtime.
+
+    You can only have 1 varArg parameter in a method and it must be the last parameter
+What is the first line of a Java application?
+
+    Public class Main {
+        public static void main(String[] args){
+
+        }
+    }
+What are packages and imports?
+
+    A package is a directory used to group classes similar to a folder in a directory. Packages are used to avoid naming conflicts 
+    either user defined or built-in.
+
+    Imports are accessing the contents of a package and accessing the classes/methods/ and behaviors in a package.
+
+What is a static import?
+
+    allows to access the static members of a class without class qualifications
+
+What does the static modifier do?
+
+    means something is directly related to a class: if a field is static, then it belongs to the class;
+
+What are Strings?
+
+    Strings are an immutable object of the String class which means that the state or value of the object cannot be altered once created
+
+What are some string methods?
+
+    isEmpty();
+    length();
+    trim();
+    charAt();
+    contains();
+
+What is the difference between String, StringBuilder, and StringBuffer?
+
+    String - An immutable constant of the String class
+
+    StringBuilder - String builder is mutable and is NOT synchronized (not threadsafe) - more efficient
+
+    StringBuffer -  is mutable and IS synchronized (threadsafe) - Slower than StringBuilder
+
+What is the string pool?
+
+    a storage area in Java heap where string literals stores; essentially object allocation
+
+What is the difference between the stack and the heap?
+
+    Stack - is a linear data structure that is used to store the collection of objects based off of Last-In-First-Out that allows 
+    push, pop, search operators. Stacks access local variables only
+
+    Heap - a heap is a chunk of memory which is shared among all threads. All classes/instances/ and arrays are allocated in a hiearchical data structure
+    Heaps also allow for you to access variables globally
+
+What goes on the stack?
+
+    Memory is allocated and deallocated automatically as the corresponding method completes it's execution. The memory is temporarily allocated where
+    the data members are accessible only if the method() that contains them is running.
+
+What goes on the heap?
+
+    Memory is allocated into 3 categories
+
+    Young Generation - 
+
+    Old Generation
+
+    Permanent Generation
+What is an exception?
+
+    is an event, which occurs during the execution of a program, that disrupts the normal flow of the program's instructions
+
+What is the difference between an exception and an error?
+
+    An Error indicates a serious problem that an application should not try to catch.
+    An Exception indicates a condition that an application may want to catch
+
+What are the different ways in which we can handle an exception?
+
+    Try-catch blocks
+    Throw
+    Throws
+    Checked/Unchecked Exceptions
+
+What are the differences between a checked exception and an unchecked exception?
+
+    Checked exceptions need to be handled using try,catc,finally, or Throws
+    Unchecked compilers do not check and you would have to fix your code instead
+
+How many catch blocks can be used in a try catch? (min and max)?
+
+    Infinite amount of catch
+
+What does finally do?
+
+    Finally instates a block or line of code that will run regardless of a catch in the Try block
+
+Can finally be skipped? How?
+
+    No you cannot skip a finally blocked except removing it
+
+How do I create a custom exception?
+
+    You would create a class and extend the Exception class and define super(); to priotize your exception as the parent
+
+    Next you would define a message parameter and a Throwable clause associate with the Exception constructor
+    
+What is autoboxing? 
+What is auto-unboxing?
+What is a wrapper class?
+What are the different wrapper classes?
+What is garbage collection?
+How do I perform garbage collection?
+What is the difference between final, finally, and finalize?
+What is the Reflection API? (Out of Scope)
+What is a Lambda expression?
+What is a functional interface?
+What are the pillars of object oriented programming? Explain them.
+What is the difference between an abstract class and an interface?
+How many interfaces can a class implement in Java?
+How many interfaces can an interface implement in Java?
+How many interfaces can interface extend in Java?
+Can an abstract class implement an interface in Java?
+How many classes can a class extend in Java?
+How many abstract classes can a class extend in Java?
+What are the different non-access modifiers? What do they do?
+What are the differences between FileinputStream, FileReader, and BufferedReader (as well as their counterparts)? (Out of Scope)
+What is the Scanner class? (Out of Scope)
+What are some Scanner methods? (Out of Scope)
+What is serialization and deserialization? (Out of Scope)
+How do I serialize an object? (Out of Scope)
+What is a marker interface? What is an example of a marker interface?
+How do I prevent some data from getting serialized? (Out of Scope)
+What is the difference between Collection and Collections?
+What are some of the subinterfaces of the Collection interface?
+What are the various input/delete/get methods for List, Set, and Queue?
+How are the List, Set, and Queue interfaces different from each other?
+What is an iterator? 
+How is an iterator different from a ListIterator?
+What are generics? Why use them?
+Do generics support primitive data types?
+What is the difference between comparator and comparable?
+What is the purpose of the Object class?
+What are some methods that are inherited from the Object class?
+What is the difference between  == and .equals?
+What is the purpose of hashcode?
+What is the Map interface’s relationship to the Collection interface?
+Explain the difference between Hashmap and Hashtable.
+How do I iterate through a HashMap?
+What is multithreading? Why do we use it? (Out of Scope)
+What are the different ways to create a thread? What is different about them? (Out of Scope)
+Why would I choose one method of creating a thread over another? (Out of Scope)
+What are the JVM recognized states of a thread? (Out of Scope)
+What are various methods that threads have? (Out of Scope)
+What is synchronization?
+What are the risks of synchronization? 
+What is deadlock, livelock, and thread starvation? (Out of Scope)
+What is the producer and consumer problem? (Out of Scope)
+What is JUnit?
+What are the annotations of JUnit?
+What are the different assert methods of JUnit?
+How do I create a test case and test suite in JUnit?
+What is TestNG?
+What are the annotations of TestNG?
+How do I create a test case and test suite in TestNG?
+What is Maven?
+What is the Maven lifecycle?
+What is the purpose of the pom.xml?
+What is the purpose of using Maven?
+What is the difference between a Singleton and Factory?
+What is the difference between a Java Bean and a POJO?
+What is the difference between implicit and explicit casting?
+When can you upcast a variable? Downcast a variable?
