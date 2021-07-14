@@ -112,6 +112,9 @@ Once you have cloned the repository and setup all the required tools, open the "
 #Login Page 
 After pressing the play button the program should connect you over to the login page where you will have to login with the credentials of a user you created on your local database. 
 
+![Login page](https://gitlab.com/RyanTyler/finalp1/-/blob/master/RembursementProject1/ReadMeImg/REIMPage.PNG)
+
+<br>
 #Index Page
 Afterwards you should be able to access the index(home) page where you will see your navigation of all the options under an employee (Submit Requests, Requests,and Home) These are your primary navigators with the log out button under the notification symbol in the top right
 
