@@ -106,29 +106,35 @@ System variables used:
 	
 ## Usage
 
-#StartUp
+##StartUp
+
 Once you have cloned the repository and setup all the required tools, open the "main.py" file as it should be configured in flask already and click the green run button in Jetbrains(Pycharm) in the top right.
 
-#Login Page 
+##Login Page 
+
 After pressing the play button the program should connect you over to the login page where you will have to login with the credentials of a user you created on your local database. 
 
 ![Login Page](/RembursementProject1/ReadMeImg/LoginPAGE.PNG)
 
 <br>
-#Index Page
+##Index Page
+
 Afterwards you should be able to access the index(home) page where you will see your navigation of all the options under an employee (Submit Requests, Requests,and Home) These are your primary navigators with the log out button under the notification symbol in the top right
 
 ![Index Page](/RembursementProject1/ReadMeImg/IndexP.PNG)
 
-#Submit Requests Page
+##Submit Requests Page
+
 To submitting reimbursements as long as you have established your tables via create statements you should fill out the forms stating the price to be reimbursed along with the the manager it should follow to and the reason behind your submission.
 
 ![Submit Request Page](/RembursementProject1/ReadMeImg/REIMPage.PNG)
-#Requests Page
+##Requests Page
+
 After a reimburement is submitted on the submit reimbursement tab, you can check the request under the requests tab and see the status of all of your pending/approved/denied reimbursements submitted. If you log in as a manager you should be able to check all of the request submitted on the same tab (requests) and have the ability to approve/deny/re-open any requests you have created.
 ![Request Page](/RembursementProject1/ReadMeImg/PendingPAGE.PNG)
 
-#Statistics Page
+##Statistics Page
+
 If you are a manager you will have access to the statistics tab where you will be able to see the statistics regarding members who submitted reimbursements and look at a graph depiction or direct table for information.
 
 ## License
