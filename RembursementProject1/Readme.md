@@ -83,6 +83,16 @@ PyCharm: We will be using PyCharm as our integrated development environment for 
 
 Link: https://www.jetbrains.com/pycharm/
 
+
+## System variable notes
+If you are using System environment variables the following link is how to set up your variables for access in the code after downloading 			drivers: https://www.youtube.com/watch?v=bEroNNzqlF4
+
+System variables used:
+	db_url
+	db_username
+	db_password
+	db_name
+	
 ## Usage
 
 > Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
