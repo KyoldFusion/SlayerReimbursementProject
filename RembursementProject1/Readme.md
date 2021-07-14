@@ -88,9 +88,9 @@ Link: https://www.jetbrains.com/pycharm/
 If you are using System environment variables the following link is how to set up your variables for access in the code after downloading 			drivers: https://www.youtube.com/watch?v=bEroNNzqlF4
 
 System variables used:
-	db_url
-	db_username
-	db_password
+	db_url <br>
+	db_username <br>
+	db_password <br>
 	db_name
 	
 ## Usage
