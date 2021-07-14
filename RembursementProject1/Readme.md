@@ -112,7 +112,7 @@ Once you have cloned the repository and setup all the required tools, open the "
 #Login Page 
 After pressing the play button the program should connect you over to the login page where you will have to login with the credentials of a user you created on your local database. 
 
-<img src="https://gitlab.com/RyanTyler/finalp1/-/blob/master/RembursementProject1/ReadMeImg/REIMPage.PNG" width="200" height="200">>
+![Login Page](.RembursementProject1/ReadMeImg/IndexP.PNG)
 
 <br>
 #Index Page
