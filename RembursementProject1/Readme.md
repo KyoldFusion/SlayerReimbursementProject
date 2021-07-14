@@ -6,12 +6,22 @@ Here goes your awesome project description!
 
 ## Technologies Used
 
-* Javascript
+* Javascript - ES6
 * HTML - HTML 5
-* CSS - BootStrap
+* CSS - BootStrap 5
 * SQL - PostgreSQL
 * Python - 3.8
 * Flask - 1.1.1
+* Flask_cors - 2.01
+* datetime
+* Logging 
+* Gherkin - 9.0
+* Selenium -  4.0
+* Cucumber - 4.2
+* Unittest / Mock - 3.96
+* PYODBC - 4.0
+* JSON
+* Fetch - 5.82
 * Postman 
 
 ## Features
@@ -52,7 +62,8 @@ CREATE TABLE valorant_employees (
 	tiers varchar not null,
 	employee_password varchar  not null,
 	employee_username varchar  not null unique,
-	email varchar  not null
+	email varchar  not null,
+	isManager byte
 )
 
 CREATE TABLE valorant_reinbursements(
@@ -84,8 +95,8 @@ PyCharm: We will be using PyCharm as our integrated development environment for 
 Link: https://www.jetbrains.com/pycharm/
 
 
-## System variable notes
-If you are using System environment variables the following link is how to set up your variables for access in the code after downloading 			drivers: https://www.youtube.com/watch?v=bEroNNzqlF4
+## System variable Setup
+If you are using System environment variables the following link is how to set up your variables for access in the code after downloading 			drivers: <br> https://www.youtube.com/watch?v=bEroNNzqlF4
 
 System variables used:
 	db_url <br>
@@ -95,7 +106,9 @@ System variables used:
 	
 ## Usage
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+> Once you have cloned the repository and setup all the required tools, open the "main.py" file as it should be configured in flask already and click the green run button in Jetbrains(Pycharm) in the top right. After pressing the play button the program should connect you over to the login page where you will have to login with the credentials of a user you created on your local database. Afterwards you should be able to access the index(home) page and begin submitting reimbursements as long as you have established your tables via create statements. After a reimburement is submitting on the submit tab, you can check the request under the requests tab and see the status of all of your pending/approved/denied reimbursements submitted.
+
+If you log in as a manager you should be able to check all of the request submitted on the same tab (requests) and have the ability to approve/deny/re-open any requests you have created. To login as a manger you must specify they are a manager via record creation in SQL.
 
 
 ## License
