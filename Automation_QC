@@ -1,0 +1,501 @@
+What is the testing pyramid?
+    The testing pyramid is a visual representation of the number of tests we should write at the different levels to test different qualities
+
+    The test pyramid is made up of:
+
+    UI Tests - Target the UI behavior of the interfaces, which are often highly interactive in nature of the UI
+
+    Integration Tests - target the behavior of an application while integrating with external dependencies
+
+    Unit Tests -  Target small units of code preferably in isolation
+
+What is unit testing? How do you write true unit tests?
+    
+    Target the UI behavior of the interfaces, which are often highly interactive in nature of the UI lowest level of testing using mocking
+
+    You would write true unit tests by using assertions or testing unit frameworks such as JUnit / TestNG / or Mockito
+
+What is integration testing?
+
+    target the behavior of an application while integrating with external dependencies
+
+What is system testing?
+
+    Software testing that is perforrmed on a complet integrated system to evaluate the compliance of the system with the given requirements.
+
+    These principles are testing against SRS (Software Requirements Specification)
+        {Correctiveness, Completeness, Consistency, unambiguousness, Ranking for importance and stability, Modifiability, Verafiability, Traceability
+        , Design independence, Testability, Understable by the client, Right level of abstraction} (Overload information)
+    
+    The Process for System Testing is as Following:
+
+    1. Test Environment Setup:
+        Create testing environment for the better quality testing.
+
+   2. Create Test Case:
+        Generate test case for the testing process.
+
+    3. Create Test Data:
+        Generate the data that is to be tested.
+
+    4. Execute Test Case:
+        After the generation of the test case and the test data, test cases are executed.
+
+    5. Defect Reporting:
+        Defects in the system are detected.
+
+    6. Regression Testing:
+        It is carried out to test the side effects of the testing process.
+
+    7. Log Defects:
+        Defects are fixed in this step.
+
+    8. Retest:
+        If the test is not successful then again test is performed.
+
+What is user acceptance testing?
+
+    The method of testing where a system is tested for acceptability, the test is used to evaluate the compliance of the system with the requirements
+    used to gauge whether it is acceptable for delivery or not.
+
+What are the types of user acceptance testing? What is the difference between them?
+
+    The Types are as following:
+        User Acceptance Testing - Wheether the requirements are met and in compliance with the system for delivery
+
+        Business Acceptance Testing - Used to determine whether the product meets the business goals and purposes (primarily focused on profits)
+
+        Contract Acceptance Testing - Specifies that when a product goes live within a predetermined period, that acceptance test must be performed and pass 
+                                        ( Acceptance Tests must pass before the product goes live within a period)
+
+        Regulations Acceptance Testing - Determines whether the product violates rules and regulations defined by the government where software is released
+
+        Operational Acceptance Testing - Used to determine the operational readiness of the product and is a non-functional testing.
+                                         (includes testing of recovery, compatability, maintaiblity, and reliability)
+
+        Alpha Testing - used to determine the product in the development testing environment by specialized testers (usually alpha testers (in house testing))
+
+        Beta Testing - used to assess the product by exposiing it to real end-users, (called beta testers) in their environments and conduct feedback improvements (out-house testing)
+
+What is positive testing?
+
+    testing that is performed by assuming everything will be as expected
+    Test that the feature behaves correctly when used correctly. This is also called “happy path” testing.
+
+What is negative testing?
+
+    testing that is performed by validating the application against invalid data to check if error-handling is efficient.
+        Test that the feature behaves in a correct manner in response to incorrect use.
+
+what is Alternate path Testing?
+
+    Test that the feature behaves correctly when the user takes an alternate path (e.g. hitting the ENTER key versus clicking a button)
+
+What is functional testing?
+
+    Any test that validates the actions that your application must perform
+
+What is non-functional testing?
+
+    Tests the app's metrics and vulnerabilities
+
+    i.e:
+    Security testing - Pen testing
+    performance testing - such as load testing ( how the app behaves under certain amounts of connections)
+    Stress testing - (how the app behaves with near maxiumum loads or beyond maximum loads)
+    Spike testing - (how does the app behave under certain leaps of user count?)
+    Ramp up testing - (how does the app perform with gradual increase of users?)
+    Ramp down testing - (how does the app perfrom with the gradual decrease of users?)
+    Usability testing - (can the app be used by users? functionality essentially design wise (not having white backgrounds on white text))
+
+What is load testing?
+
+    Creating production simulations within an application to measure how the application will respond to resource levels and find breaking points
+
+What is stress testing?
+
+    softwar testing that verifies the stability and reliability of an application
+
+What is spike testing?
+
+    performance testing in which an application receives a sudden or extreme increase or decrease in load
+
+What is ramp-up testing?
+
+    performance testing to gauge how the performance will perform with an increase of users
+
+What is ramp-down testing?
+
+     performance testing to gauge how the performance will perform with an increase of users
+    
+
+What is usability testing?
+
+    testing whether the application is usable by real users to ensure the application is effective and efficient in a positive user experience 
+
+What is exploratory testing?
+
+    Testing where test cases are not created in advance but created as the testers progress through the application
+
+        (Entails assuming requirements and validations off of current behavior of the application.)
+
+What is exhaustive testing?
+
+    testing approach in which all possible combinations of scenarios and use/test cases are used for testing
+
+        (essentially permutational testing on an input field to verify all characters/numbers/input characters are allowed in a password field)
+
+What is boundary testing?
+
+    (used in black box testing)
+
+    testing process in which extreme ends or boundaries are established for input values
+
+    x(min) x(min+) x(nom - middle) x(max-) x(max)
+
+    Using min, max, min(+) the value right above the miniumum, max(-) the value right below the maxiumum, nom = median value
+
+What is equivalency testing?
+    (used in black box testing)
+
+    Testing method used to reduce the total number of test cases (i.e 1000 test cases but only 1-100 need to be tested)
+
+    Entails dividing up the test values in some equivalent manner  (so perhaps you’d testing every 25 numbers or so when testing
+     a method that deals with numeric calculations). This is more practical than testing every single number ever (an impossibility in most cases).
+
+    
+What is smoke testing?
+
+    testing to determine whether a deployed build is stable or not (testing to reveal faults that could be severe enough to break functionalities but not breaking them)
+
+    ( A wide approach where all areas of the software application are tested without getting in too deep.)
+What is regression testing?
+    (black box testing)
+
+     Entails running old test suites to ensure that newly added functionality did not break old functionality.
+
+What is re-testing?
+
+     executing a previously failed test against new software to check if the problem is resolved
+
+What is sanity testing? How is it different from basic regression testing?
+
+    Narrow regression testing with a deep focus on one or more small set of areas of functionality.
+
+        (regresion testing is the running of the entire old suite while sanity testing regression is only a small area of old tests)
+
+What is blackbox testing?
+
+    Entails writing tests that do not require the actual code of the application to be written
+
+What is whitebox testing?
+
+    Entails writing tests that are based around the actual source code of the application. Usually aims for code coverage as a goal.
+
+What is manual testing?
+
+    You test and track results through direct use of the application.
+
+What is the difference between quality assurance and quality control?
+
+    Quality Control - test procedures used to verify that a product is safe and effective after manufacturing (Testing procedures)
+
+    Quality Assurance - Actions taken into design and manufacturing to create a safe effective product (actions taken in design)
+
+What is a defect?
+
+    A variation or deviation of the software application from end user's requirements
+        (an error in code that causes incorrect/unexpected results)
+
+What’s the difference between a bug and an error?
+
+    Bug - an informal name specified to a defect
+
+    error - a mistake made in the code which is why code cannot execute or compile
+
+What is the defect life cycle?
+
+    A cycle of a defect from which it goes through covering the different states in its entire life.
+
+    New - Beginning of a defect
+
+    Assigned - Defect has been assigned to the development team
+
+    Open - Developer starts the process of analyzing the defect and working on fixes
+
+    Fixed - When the defect has been fixed
+    
+    Pending Retest - testing the fixed defect to verify if the defect remains
+
+    Reopen - If there are any issues that persist in the defect it will be re-assigned to the developer
+
+    Verified - The tester finds no issues with the defect after re-testing and feels the defect has been fixed
+
+    Closed - The defect no longer exists and the issue is closed
+
+What is a test strategy document?
+
+    A high level document developed by the project manager that sets the standards for testing processes/activities/test plans
+
+What is a test plan document?
+
+    a document detailing hte objectives, resources, and processes for a specific test for a software/hardware product
+
+What is a test case document?
+
+    a s set of test data, preconditions, expected results and postconditions
+
+What is a requirements traceability matrix?
+
+    a document that demotstrates the relationship between requirements and other artifacts (tests, test results, issues)
+
+What is test-driven development?
+
+    a software development approach in which test cases are developed to specify adn validate what the code will do
+
+What is behavior-driven development?
+
+     an appraoch toe software development in which developers implement the features of an application from a stakeholders view
+     (nontechnical)
+
+What are some examples of BDD frameworks?
+
+    Cucumber-JVM, Jbehave 
+
+What is data-driven testing?
+
+    software testing method in which etst data is stored in a table or spreadsheet format. This allows users to input
+    test scripts that can execute tests for all test data from teh table and expect an output (table-driven/parameterized testing)
+
+What is TestNG?
+
+    An automation testing framework (NG stands for Next generation) that was inspired by Junit that uses the same
+    annotations (@)
+
+What are the annotations of TestNG? What does each annotation do?
+
+    @Before| After Suite - run only once before/after all test suites
+    @Before| After Class - run only once before/after the first test method in current class
+    @Before| After Test - run before/after  each test method inside the @test tag
+    @Before| After Groups - only the configurations tests listed within the group will run (before/after)
+    @Before| After Method - will run before/after each test method
+    @Test - marks a class or method as part of a test
+    @Parameters - describes how to pass parameters to the @Test method
+    @Listeners - defines listeners on a test class
+    @Factory - marks a method as factory (that returns objects that will be used by TestNG as test cases) method must return Object[].
+    @DataProvider - Marks a method as supplying data for a test method must return Object[][]
+    
+
+What are some TestNG assertions?
+
+    assertEquals - takes two boolean values as input and validates if they are equal or not
+    assertEqual - passes the string value and expected string value as parameters, validates if actual/expect are the same
+    assertTrue - validates if a condition is true
+    assertFalse - validates if a condition is false
+
+How do I create test groups in TestNG?
+
+    Using the @Test(groups = {"group1", "group2"})
+
+    Using the @Test annotation and then placing groups in a parenthesis equals curly bracket then quote group1 and add more if needed
+
+Why would I use a data provider? (Not yet covered)
+
+You would use a data provider when a user needs to pass complex parameters
+
+How do I create a data provider in TestNG? (Not yet covered)
+
+you would import DataProvider annotation (org.testng.annotations.DataProvider;)
+
+then define the DataProvider with 
+    @DataProvider (name = "data-provider")
+    public Object [][] dpMethod(){ // Establish DataProdiver Object
+        return new Object[][] {{"First-Value}, {"Second-Value}};
+    }
+
+How do I specify that a test method should use a data provider?
+
+    By using the @Test(dataProvider = "test-data") annotation
+    
+What are some of the tags used in the XML configuration of TestNG?
+    <suite>
+    <test>
+    <parameter>
+    <classes> 
+
+How do I disable a test in TestNG?
+
+    @Test (enabled = False)
+
+What is Mockito?
+
+    An open source mocking framework that is based off of the Java library used for unit testing of java applications
+
+What are some of the annotations of Mockito? What are they used for?
+
+    @Mock - used to mock objects 
+    @RunWith - Class Level annotation used to keep tests clean and improve debugging
+    @injectMocks - Marks a field / parameter onw hich the injection should be perfromed
+    @Captor - Allows the creation of a field elvel argument captor
+    @Spy - Allows the creation of partially mock objects (Allows shorthand wrapping of the field instances in a spy object)
+
+What is test automation?
+
+    The practice of running test automatically, managing test data, utilizing results to improve software quality
+
+What are the benefits of automating tests?
+
+    Improves accuracy
+    increases the speed of test execution
+    Does not require human intervention
+
+When should you automate tests? When shouldn’t you automate tests?
+
+    When the task is repetitive and frequently done over and over within an application and is predictable
+
+    You should not automate if you are entering sensitive data or the task you are attempting to automate is constantly changing (unpredictable)
+
+What is Selenium WebDriver?
+
+    A web framework that permits you to execute cross-browser tests
+
+What are some of the implementations of WebDriver?
+
+    ChromeDriver
+    EdgeDriver
+    FirefoxDriver
+    InternetExplorerDriver
+
+How do I use a WebDriver to load up a webpage?
+
+    Driver.get
+
+How do I specify which driver I’m using and where to find it when setting up my WebDriver?
+
+    WebDriver driver = driver.<driver type>('Path to driver')
+
+What is the page object model? Why do we use it?
+
+    A design pattern in selenium that creates an object repository for storing all web elements. (A file that locates all necessary/used elements on a page and the functions/methods
+    associate to be tested)
+
+What is PageFactory?
+
+    A class provided by Selenium WebDriver to support Page Object Design Patters
+    @FindBy:
+    ClassName
+    CSS
+    Name
+    Xpath
+    TagNaem
+    LinkText
+    PartialLinkText
+
+What is a WebElement?
+
+    An HTML element on a website
+
+What annotation is used to grab WebElements from a web page when using PageFactory?
+
+    The @FindBy annotation
+
+What are the Selenium selectors/locators?
+
+    find_element_by_id
+    find_element_by_cssSelector
+    find_element_by_class_name
+    find_element_by_name
+    find_element_by_xpath
+    find_element_by_link_text
+    find_element_by_partial_link_text
+    find_element_by_tag_name
+     
+What is xpath? What does it stand for? What does it allow us to do?
+
+    Xpath is the language used for locating nodes in an XML document. Xpath means XML Path Language. This allows us to target elements in web applications when
+    we do not have a suitable id or name attribute for an element. They can be located absolutely or relatively.
+
+What method do I use to send text to an input box with Selenium?
+
+    sendKeys(Keys.<keytype)
+
+What method do I use to click on an element using Selenium?
+    .click()
+
+How do I click on an alert box when using Selenium?
+
+    driver.switchTo().alert() then decide to accept/dismiss
+
+What are the different waits in Selenium? What is the difference between them all? How do I use them?
+
+    explicit wait - used to tell the web driver to wait a for certain conditions or a maxiumum amount of time exceeded before throwing "ElementNotVisibleException"
+
+    implicity wait - used to tell the web driver to wait a certain amount of time before it throws a No Such Element Exception 
+
+    fluent wait -  used to define maximum amount of time for web driver to wait for a condition as well as having a frequency in which we want to check the conditon
+    before throwing "ElementNotVisibleException". also checks for the web element at regular intervals until the object is found or a timeout happens
+
+    (i.e check every 15 seconds for 60 seconds)
+
+What is Cucumber?
+
+    A behavior Driven Development Testing frame used to write acceptance tests in plain text
+
+What is Gherkin?
+
+    Gherkin is the language developers use to define tests in Cucumber
+
+What are some Gherkin keywords? What does each of these keywords do?
+
+    Scenario -  a label for the behavior you're going to describe
+
+    Given - Describe something that happened in a past
+
+    When - Describes a condition that will happen in the future
+
+    Then - Describe the response to the When event
+
+    And / But - used to write more fluid Then,When,Givens instead of writing to a single line
+
+    Feature - rovide a high-level description of a software feature
+
+    Background - allows you to add some context to the scenarios that follow it
+
+    Rule -  represent one business rule that should be implemented
+
+
+What is a feature file?
+
+    A file that stores feature, scenarios, and feature descriptions to be tested,
+    
+     The feature file is an entry point to write cucumber tests and used as a live document at the time of testing
+What is Gluecode?
+
+    Glue code is code that interracts directly with your application and describes the location and path to your step-definition file
+
+What is a Step Definition File?
+
+    Step Definition File stores the mapping between each step of a scenario defined in the feature file with the source code to be executed
+
+How do I run a feature file and the Gluecode that was generated using that feature file?
+
+    You would right click the feature file with your scenarios and attempt to run the .feature file in Sping Suite/Eclipse
+    And the test cases will automatically be generated
+
+What is SOAPUI?
+
+    An open-source API testing tool for testing web services and RESTful principles that allows testers to execute
+    automated functional, regression, compliance,m and load tests on different web APIs
+
+How I test an endpoint with SOAPUI?
+
+    Start your server -> Open SOAPUI -> Select Your HTTP method -> Specify the Endpoint -> Send the request
+
+How do I perform load testing with SOAPUI?
+
+    Create a new LoadTest -> Name your Load Test -> Run the LoadTest -> Add your Assertions -> Run the loadtest in ReadyAPI
+
+How do I set up a mock server using SOAPUI?
+
+    Create new project -> Specify the name / WSDL  -> Right click your project -> "Generate SOAP Mock Service" -> Name and Click Okay ->
+    The mock service should then appear in your projects pane and you should be able to edit it from there before launching
